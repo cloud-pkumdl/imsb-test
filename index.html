@@ -571,11 +571,13 @@ const piData = [
 ];
 
 // resultMap[row][col] = index into piData
+// row0=大复合物, row1=方法工具, row2=通道受体(小而精), row3=计算/预测
+// col0=机制闭环, col1=数据挖掘中间态, col2=转化应用, col3=跨界启发
 const resultMap = [
-  [5, 14, 0, 4],
-  [2, 11, 9, 15],
-  [7, 1, 6, 12],
-  [10, 8, 3, 13]
+  [5, 14, 4, 0],
+  [8, 11, 9, 2],
+  [7, 12, 6, 3],
+  [1, 10, 15, 13]
 ];
 
 const flavorTexts = [
@@ -691,7 +693,7 @@ function showResult() {
   resultDiv.innerHTML = '<div class="result-code">' + pi.code + '</div>' +
     '<div class="result-tagline">' + pi.tagline + '</div>' +
     getDimHtml(pi.code) +
-    '<img class="result-avatar" src="./portraits/pi_' + piIdx + '.jpg?v=2" alt="' + pi.name + '" onerror="this.style.display=\'none\'">' +
+    '<img class="result-avatar" src="http://49.232.161.14/openclaw/imsb-portraits/pi_' + piIdx + '.jpg?v=2" alt="' + pi.name + '" onerror="this.style.display=\'none\'">' +
     '<div class="result-name-label">代表性人物：</div>' +
     '<div class="result-name">' + pi.name + '</div>' +
     '<div class="result-field">' + pi.field + '</div>' +
